@@ -56,7 +56,7 @@ namespace ConsoleApplication1
                 ,new ProcessInfo(){ ProcessIsActive = true, ProcessName="process2",ProcessDescription=""}
                 }
             };
-            Console.WriteLine(info.Processes[0].ProcessName);
+            
             return info;
         }
 
