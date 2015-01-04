@@ -1,0 +1,27 @@
+﻿<!doctype html>
+<html lang="fr" ng-app>
+<head>
+    <meta charset="UTF-8">
+    <title>Ma première page</title>
+</head>
+<body>
+    <div id="wrapper" ng-app>
+        <div ng-controller="DataCtrl">
+            <div ng-model="data">
+                {{data.GetHostInfosResult.MachineName}}
+                <br />Last_update = {{last_update | date:'yyyy-MM-dd HH:mm:ss Z'}}
+                <div ng-repeat="process in data.GetHostInfosResult.Processes">
+                    <div>
+                        <div>{{process.ProcessIsActive}}</div>
+                        <div>{{process.ProcessName}}</div>
+                        <div>{{process.ProcessDescription}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.2/angular.min.js"></script>
+    <script src="app/app.js"></script>
+</body>
+</html>
+
